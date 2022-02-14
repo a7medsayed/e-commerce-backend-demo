@@ -15,7 +15,7 @@ export const typeOrmConfigDev: TypeOrmModuleOptions = {
 };
 export const typeOrmConfigProd: TypeOrmModuleOptions = {
   type: 'postgres',
-  host: process.env.DATABASE_URL,
+  url: process.env.DATABASE_URL,
   entities: ['**/*.entity.js'],
   ssl: {
     rejectUnauthorized: false,
