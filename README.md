@@ -61,7 +61,7 @@ $ npm run test
 
 ```
 
-### Services  Documentation
+# Services  Documentation
 
 ```bash
 -- base url: http://localhost:3000/
@@ -69,7 +69,7 @@ $ npm run test
 
 ```
 
-# auth/signup  
+## auth/signup  
 ```bash
 method => Post
  request body:
@@ -84,7 +84,7 @@ response body:
    
 
 ```
- # auth/signin 
+ ## auth/signin 
  
   ```bash
   method => Post
@@ -99,7 +99,7 @@ response body:
  
 ```
  
- # item/create 
+ ## item/create 
  
  ```bash
  method => Post
@@ -116,7 +116,7 @@ response body:
    
 ```
  
- # item/all?limit=20&page=1 
+ ## item/all?limit=20&page=1 
  
  ```bash
  method => Get
@@ -131,7 +131,7 @@ response body:
  
 ```
 
- # item/active?limit=20&page=1 
+ ## item/active?limit=20&page=1 
 
 ```bash
 method => Get
@@ -146,7 +146,7 @@ method => Get
    
 ```
 
-# order/create  
+## order/create  
 
 ```bash
 method => Post
@@ -161,7 +161,7 @@ method => Post
    
 ```
 
-# order?limit=20&page=1 
+## order?limit=20&page=1 
 
 ```bash
 method => Get
@@ -177,7 +177,7 @@ method => Get
    
 ```
 
-# order/all?limit=20&page=1  
+## order/all?limit=20&page=1  
 
 ```bash
 method => Get
@@ -192,7 +192,7 @@ method => Get
    
 ```
 
-# order/cancel/id 
+## order/cancel/id 
 
 ```bash
 method => Post
@@ -206,7 +206,7 @@ method => Post
    
 ```
 
-# order/complete/id  
+## order/complete/id  
 
 ```bash
 method => Post
