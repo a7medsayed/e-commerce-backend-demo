@@ -62,11 +62,16 @@ $ npm run test
 ```
 
 ## Services  Documentation
+
+```bash
 -- base url: http://localhost:3000/
 -- heroku : https://obscure-wave-92369.herokuapp.com/
 
+```
+
 # auth/signup  
- method => Post
+```bash
+method => Post
  request body:
  {
  "email": "example@gmail.com",
@@ -77,7 +82,11 @@ $ npm run test
 response body:
    return created user.
    
- # auth/signin  
+
+```
+ # auth/signin 
+ 
+  ```bash
   method => Post
   request body:
    {
@@ -88,8 +97,12 @@ response body:
  response body:
    return access token.
  
+```
+ 
  # item/create 
-  method => Post
+ 
+ ```bash
+ method => Post
   request body:
    {
    "name": "product1",
@@ -101,8 +114,12 @@ response body:
  response body:
    return created item.
    
+```
+ 
  # item/all?limit=20&page=1 
-  method => Get
+ 
+ ```bash
+ method => Get
   request query:
    {
    "limit": 20,
@@ -112,8 +129,12 @@ response body:
  response body:
    return all items.
  
+```
+
  # item/active?limit=20&page=1 
-   method => Get
+
+```bash
+method => Get
    request query:
      {
      "limit": 20,
@@ -123,8 +144,12 @@ response body:
  response body:
    return all active items
    
+```
+
 # order/create  
-  method => Post
+
+```bash
+method => Post
   request body:
    {
    "totalPrice": 100,
@@ -134,8 +159,12 @@ response body:
  response body:
    return created order.
    
+```
+
 # order?limit=20&page=1 
-    method => Get
+
+```bash
+method => Get
     request query:
        {
        "limit": 20,
@@ -146,8 +175,12 @@ response body:
  response body:
    return user orders.
    
+```
+
 # order/all?limit=20&page=1  
-  method => Get
+
+```bash
+method => Get
   request query:
      {
      "limit": 20,
@@ -157,8 +190,12 @@ response body:
  response body:
    return all created orders admin only.
    
+```
+
 # order/cancel/id 
-  method => Post
+
+```bash
+method => Post
   request param:
      {
      "id": 1
@@ -167,8 +204,12 @@ response body:
  response body:
    return canceled order.
    
+```
+
 # order/complete/id  
-  method => Post
+
+```bash
+method => Post
   request param:
      {
      "id": 1
@@ -177,6 +218,7 @@ response body:
  response body:
    return completed order.
    
+```
    
    
    
