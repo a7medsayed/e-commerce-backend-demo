@@ -61,15 +61,19 @@ $ npm run test
 
 ```
 
-# Services  Documentation
+# Services  Documentation 
 
 $  You have to provide a JWT token to start using the APIs
 
 ```bash
--- base url: http://localhost:3000/
--- heroku : https://obscure-wave-92369.herokuapp.com/
-
+-- Base URL: http://localhost:3000/
 ```
+
+```bash
+-- heroku application URL : https://obscure-wave-92369.herokuapp.com/
+```
+
+## Swagger Documentation Path is /api-docs
 
 ## /auth/signup  
 ```bash
