@@ -24,7 +24,17 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## General info
+This project is demo E-Commerce application using Nestjs framework and PostgreSQL DataBase.
+
+## app Features
+
+1- user authentication (sign up and sign in) using jwt.
+2- users can create and show all active products.
+3- users can create order with needed products.
+4- users can complete/cancel orders.
+5- users can shoe their orders.
+6- admin users can show all created orders.
 
 ## Installation
 
@@ -51,16 +61,122 @@ $ npm run test
 
 ```
 
-## Support
+## Services  Documentation
+-- base url: http://localhost:3000/
+-- heroku : https://obscure-wave-92369.herokuapp.com/
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+# auth/signup  
+ method => Post
+ request body:
+ {
+ "email": "example@gmail.com",
+ "password": "123456",
+ "admin": true/false
+ }
 
-## Stay in touch
+response body:
+   return created user.
+   
+ # auth/signin  
+  method => Post
+  request body:
+ {
+ "email": "example@gmail.com",
+ "password": "123456",
+ }
+ 
+ response body:
+   return access token.
+ 
+  # item/create 
+  method => Post
+  request body:
+ {
+ "name": "product1",
+ "count": "100",
+ "price": 100,
+ "isActive": true/false
+ }
+ 
+ response body:
+   return created item.
+   
+  # item/all?limit=20&page=1 
+  method => Get
+  request query:
+ {
+ "limit": 20,
+ "page": 1,
+ }
+ 
+ response body:
+   return all items.
+ 
+ # item/active?limit=20&page=1 
+  method => Get
+   request query:
+ {
+ "limit": 20,
+ "page": 1,
+ }
+ 
+ response body:
+   return all active items
+   
+ # order/create  
+  method => Post
+  request body:
+ {
+ "totalPrice": 100,
+ "itemIds": [1 , 2]
+ }
+ 
+ response body:
+   return created order.
+   
+  # order?limit=20&page=1 
+    method => Get
+    request query:
+       {
+       "limit": 20,
+       "page": 1,
+       }
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+ 
+ response body:
+   return user orders.
+   
+  # order/all?limit=20&page=1  
+  method => Get
+  request query:
+     {
+     "limit": 20,
+     "page": 1
+     }
+ 
+ response body:
+   return all created orders admin only.
+   
+  # order/cancel/id 
+  method => Post
+  request param:
+     {
+     "id": 1
+     }
+ 
+ response body:
+   return canceled order.
+   
+  # order/complete/id  
+  method => Post
+  request param:
+     {
+     "id": 1
+     }
+ 
+ response body:
+   return completed order.
+   
+   
+   
+   
