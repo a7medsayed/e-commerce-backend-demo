@@ -63,6 +63,8 @@ $ npm run test
 
 # Services  Documentation
 
+$  You have to provide a JWT token to start using the APIs, Authorization: Bearer <token>
+
 ```bash
 -- base url: http://localhost:3000/
 -- heroku : https://obscure-wave-92369.herokuapp.com/
