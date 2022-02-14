@@ -80,61 +80,61 @@ response body:
  # auth/signin  
   method => Post
   request body:
- {
- "email": "example@gmail.com",
- "password": "123456",
- }
+   {
+   "email": "example@gmail.com",
+   "password": "123456",
+   }
  
  response body:
    return access token.
  
-  # item/create 
+ # item/create 
   method => Post
   request body:
- {
- "name": "product1",
- "count": "100",
- "price": 100,
- "isActive": true/false
- }
+   {
+   "name": "product1",
+   "count": "100",
+   "price": 100,
+   "isActive": true/false
+   }
  
  response body:
    return created item.
    
-  # item/all?limit=20&page=1 
+ # item/all?limit=20&page=1 
   method => Get
   request query:
- {
- "limit": 20,
- "page": 1,
- }
+   {
+   "limit": 20,
+   "page": 1,
+   }
  
  response body:
    return all items.
  
  # item/active?limit=20&page=1 
-  method => Get
+   method => Get
    request query:
- {
- "limit": 20,
- "page": 1,
- }
+     {
+     "limit": 20,
+     "page": 1,
+     }
  
  response body:
    return all active items
    
- # order/create  
+# order/create  
   method => Post
   request body:
- {
- "totalPrice": 100,
- "itemIds": [1 , 2]
- }
+   {
+   "totalPrice": 100,
+   "itemIds": [1 , 2]
+   }
  
  response body:
    return created order.
    
-  # order?limit=20&page=1 
+# order?limit=20&page=1 
     method => Get
     request query:
        {
@@ -146,7 +146,7 @@ response body:
  response body:
    return user orders.
    
-  # order/all?limit=20&page=1  
+# order/all?limit=20&page=1  
   method => Get
   request query:
      {
@@ -157,7 +157,7 @@ response body:
  response body:
    return all created orders admin only.
    
-  # order/cancel/id 
+# order/cancel/id 
   method => Post
   request param:
      {
@@ -167,7 +167,7 @@ response body:
  response body:
    return canceled order.
    
-  # order/complete/id  
+# order/complete/id  
   method => Post
   request param:
      {
