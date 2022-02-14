@@ -63,7 +63,7 @@ $ npm run test
 
 # Services  Documentation
 
-$  You have to provide a JWT token to start using the APIs, Authorization: Bearer <token>
+$  You have to provide a JWT token to start using the APIs
 
 ```bash
 -- base url: http://localhost:3000/
@@ -89,6 +89,7 @@ response body:
  ## auth/signin 
  
   ```bash
+  
   method => Post
   request body:
    {
@@ -104,6 +105,8 @@ response body:
  ## item/create 
  
  ```bash
+ 
+  Authorization: Bearer token
  method => Post
   request body:
    {
@@ -121,6 +124,7 @@ response body:
  ## item/all?limit=20&page=1 
  
  ```bash
+  Authorization: Bearer token
  method => Get
   request query:
    {
@@ -136,6 +140,7 @@ response body:
  ## item/active?limit=20&page=1 
 
 ```bash
+ Authorization: Bearer token
 method => Get
    request query:
      {
@@ -151,6 +156,7 @@ method => Get
 ## order/create  
 
 ```bash
+ Authorization: Bearer token
 method => Post
   request body:
    {
@@ -166,6 +172,7 @@ method => Post
 ## order?limit=20&page=1 
 
 ```bash
+ Authorization: Bearer token
 method => Get
     request query:
        {
@@ -182,6 +189,7 @@ method => Get
 ## order/all?limit=20&page=1  
 
 ```bash
+ Authorization: Bearer token
 method => Get
   request query:
      {
@@ -197,6 +205,7 @@ method => Get
 ## order/cancel/id 
 
 ```bash
+ Authorization: Bearer token
 method => Post
   request param:
      {
@@ -211,6 +220,7 @@ method => Post
 ## order/complete/id  
 
 ```bash
+ Authorization: Bearer token
 method => Post
   request param:
      {
