@@ -28,13 +28,14 @@
 This project is demo E-Commerce application using Nestjs framework and PostgreSQL DataBase.
 
 ## app Features
-
+```bash
 1- user authentication (sign up and sign in) using jwt.
 2- users can create and show all active products.
 3- users can create order with needed products.
 4- users can complete/cancel orders.
 5- users can shoe their orders.
 6- admin users can show all created orders.
+```
 
 ## Installation
 
