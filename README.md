@@ -71,7 +71,7 @@ $  You have to provide a JWT token to start using the APIs
 
 ```
 
-## auth/signup  
+## /auth/signup  
 ```bash
 method => Post
  request body:
@@ -86,7 +86,7 @@ response body:
    
 
 ```
- ## auth/signin 
+ ## /auth/signin 
  
   ```bash
   
@@ -102,7 +102,7 @@ response body:
  
 ```
  
- ## item/create 
+ ## /item/create 
  
  ```bash
  
@@ -121,7 +121,7 @@ response body:
    
 ```
  
- ## item/all?limit=20&page=1 
+ ## /item/all?limit=20&page=1 
  
  ```bash
   Authorization: Bearer token
@@ -137,7 +137,7 @@ response body:
  
 ```
 
- ## item/active?limit=20&page=1 
+ ## /item/active?limit=20&page=1 
 
 ```bash
  Authorization: Bearer token
@@ -153,7 +153,7 @@ method => Get
    
 ```
 
-## order/create  
+## /order/create  
 
 ```bash
  Authorization: Bearer token
@@ -169,7 +169,7 @@ method => Post
    
 ```
 
-## order?limit=20&page=1 
+## /order?limit=20&page=1 
 
 ```bash
  Authorization: Bearer token
@@ -186,7 +186,7 @@ method => Get
    
 ```
 
-## order/all?limit=20&page=1  
+## /order/all?limit=20&page=1  
 
 ```bash
  Authorization: Bearer token
@@ -202,7 +202,7 @@ method => Get
    
 ```
 
-## order/cancel/id 
+## /order/cancel/id 
 
 ```bash
  Authorization: Bearer token
@@ -217,7 +217,7 @@ method => Post
    
 ```
 
-## order/complete/id  
+## /order/complete/id  
 
 ```bash
  Authorization: Bearer token
