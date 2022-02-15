@@ -66,7 +66,7 @@ $ npm run test
 
 $  You have to provide a JWT token to start using the APIs
 
-## Base URL:
+## Local Base URL:
 ```bash
  http://localhost:3000/
 ```
