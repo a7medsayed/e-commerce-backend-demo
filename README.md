@@ -33,7 +33,7 @@ This project is demo E-Commerce application using Nestjs framework and PostgreSQ
 2- users can create and show all active products.
 3- users can create order with needed products.
 4- users can complete/cancel orders.
-5- users can shoe their orders.
+5- users can show their orders.
 6- admin users can show all created orders.
 ```
 
