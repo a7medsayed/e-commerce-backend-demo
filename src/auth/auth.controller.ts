@@ -30,10 +30,4 @@ export class AuthController
     const accessToken = this.jwtService.sign(payload);
     return { accessToken };
   }
-
-  @Post('/test')
-  @UseGuards(AuthGuard())
-  async test(@User() user) {
-      return console.log(user);
-  }
 }
