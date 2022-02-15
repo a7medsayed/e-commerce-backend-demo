@@ -8,11 +8,17 @@ import { typeOrmConfigProd } from './config/typeorm.config';
 import { ItemsModule } from './items/items.module';
 import { OrdersModule } from './orders/orders.module';
 
-
 @Module({
   imports: [
-    TypeOrmModule.forRoot((process.env.NODE_ENV == 'development'? typeOrmConfigDev : typeOrmConfigProd)),
-    AuthModule, ItemsModule, OrdersModule ],
+    TypeOrmModule.forRoot(
+      process.env.NODE_ENV == 'development'
+        ? typeOrmConfigDev
+        : typeOrmConfigProd,
+    ),
+    AuthModule,
+    ItemsModule,
+    OrdersModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })

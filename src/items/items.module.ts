@@ -7,13 +7,13 @@ import { ItemsController } from './items.controller';
 import { ItemsService } from './items.service';
 
 @Module({
-  imports:[
-    PassportModule.register({defaultStrategy: 'jwt'}),
-    JwtModule.register( {
+  imports: [
+    PassportModule.register({ defaultStrategy: 'jwt' }),
+    JwtModule.register({
       secret: 'topSecret',
       signOptions: {
-        expiresIn: 3600
-      }
+        expiresIn: 3600,
+      },
     }),
     TypeOrmModule.forFeature([Item]),
   ],

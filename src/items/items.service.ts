@@ -1,6 +1,5 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { User } from 'src/auth/user.entity';
 import { Repository } from 'typeorm';
 import { CreateItemDto } from './dtos/create.item.dto';
 import { Item } from './item.entity';
@@ -55,9 +54,8 @@ export class ItemsService {
       return null;
     }
     const item = await this.itemRepo.findOne(id);
-    if(!item)
-    {
-        throw new NotFoundException('item not found');
+    if (!item) {
+      throw new NotFoundException('item not found');
     }
     return item;
   }

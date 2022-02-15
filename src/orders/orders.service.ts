@@ -23,7 +23,7 @@ export class OrdersService {
   //create new Order
   async create(createOrderDto: CreateOrderDto, user: User) {
     var items = [];
-    if (createOrderDto.itemIds.length > 0) { 
+    if (createOrderDto.itemIds.length > 0) {
       for (const itemId of createOrderDto.itemIds) {
         const item = await this.itemsService.findOne(itemId);
         items.push(item);

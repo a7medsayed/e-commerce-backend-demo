@@ -1,32 +1,35 @@
 import { User } from 'src/auth/user.entity';
 import { Order } from 'src/orders/order.entity';
-import {Entity , Column , PrimaryGeneratedColumn, OneToMany, ManyToOne, ManyToMany, JoinTable} from 'typeorm'
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  ManyToOne,
+  ManyToMany,
+  JoinTable,
+} from 'typeorm';
 
 @Entity()
-export class Item
-{
+export class Item {
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @PrimaryGeneratedColumn()
-    id: number;
+  @Column()
+  name: string;
 
-    @Column()
-    name: string;
+  @Column()
+  price: number;
 
-    @Column()
-    price: number;
+  @Column()
+  count: number;
 
-    @Column()
-    count: number;
-    
-    @Column({default: true})
-    isActive: boolean;
+  @Column({ default: true })
+  isActive: boolean;
 
-    @ManyToOne(()=> User  , (user)=>user.items)
-    public user: User;
+  @ManyToOne(() => User, (user) => user.items)
+  public user: User;
 
-
-    @ManyToMany(() => Order)
-    @JoinTable()
-    orders: Order[];
-
+  @ManyToMany(() => Order)
+  @JoinTable()
+  orders: Order[];
 }
