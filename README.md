@@ -24,7 +24,18 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## General info
+This project is demo E-Commerce application using Nestjs framework and PostgreSQL DataBase.
+
+## app Features
+```bash
+1- user authentication (sign up and sign in) using jwt.
+2- users can create and show all active products.
+3- users can create order with needed products.
+4- users can complete/cancel orders.
+5- users can show their orders.
+6- admin users can show all created orders.
+```
 
 ## Installation
 
@@ -41,8 +52,6 @@ $ npm run start
 # watch mode
 $ npm run start:dev
 
-# production mode
-$ npm run start:prod
 ```
 
 ## Test
@@ -51,23 +60,184 @@ $ npm run start:prod
 # unit tests
 $ npm run test
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
 ```
 
-## Support
+# Services  Documentation 
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+$  You have to provide a JWT token to start using the APIs
 
-## Stay in touch
+## Local Base URL:
+```bash
+ http://localhost:3000/
+```
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## heroku application URL :
+```bash  
+  https://obscure-wave-92369.herokuapp.com/
+```
 
-## License
+## Swagger Documentation Path is /api-docs
 
-Nest is [MIT licensed](LICENSE).
+## /auth/signup  
+```bash
+method => Post
+ request body:
+ {
+ "email": "example@gmail.com",
+ "password": "123456",
+ "admin": true/false
+ }
+
+response body:
+   return created user.
+   
+
+```
+ ## /auth/signin 
+ 
+  ```bash
+  
+  method => Post
+  request body:
+   {
+   "email": "example@gmail.com",
+   "password": "123456",
+   }
+ 
+ response body:
+   return access token.
+ 
+```
+ 
+ ## /item/create 
+ 
+ ```bash
+ 
+  Authorization: Bearer token
+ method => Post
+  request body:
+   {
+   "name": "product1",
+   "count": "100",
+   "price": 100,
+   "isActive": true/false
+   }
+ 
+ response body:
+   return created item.
+   
+```
+ 
+ ## /item/all?limit=20&page=1 
+ 
+ ```bash
+  Authorization: Bearer token
+ method => Get
+  request query:
+   {
+   "limit": 20,
+   "page": 1,
+   }
+ 
+ response body:
+   return all items.
+ 
+```
+
+ ## /item/active?limit=20&page=1 
+
+```bash
+ Authorization: Bearer token
+method => Get
+   request query:
+     {
+     "limit": 20,
+     "page": 1,
+     }
+ 
+ response body:
+   return all active items
+   
+```
+
+## /order/create  
+
+```bash
+ Authorization: Bearer token
+method => Post
+  request body:
+   {
+   "totalPrice": 100,
+   "itemIds": [1 , 2]
+   }
+ 
+ response body:
+   return created order.
+   
+```
+
+## /order?limit=20&page=1 
+
+```bash
+ Authorization: Bearer token
+method => Get
+    request query:
+       {
+       "limit": 20,
+       "page": 1,
+       }
+
+ 
+ response body:
+   return user orders.
+   
+```
+
+## /order/all?limit=20&page=1  
+
+```bash
+ Authorization: Bearer token
+method => Get
+  request query:
+     {
+     "limit": 20,
+     "page": 1
+     }
+ 
+ response body:
+   return all created orders admin only.
+   
+```
+
+## /order/cancel/id 
+
+```bash
+ Authorization: Bearer token
+method => Post
+  request param:
+     {
+     "id": 1
+     }
+ 
+ response body:
+   return canceled order.
+   
+```
+
+## /order/complete/id  
+
+```bash
+ Authorization: Bearer token
+method => Post
+  request param:
+     {
+     "id": 1
+     }
+ 
+ response body:
+   return completed order.
+   
+```
+   
+   
+   
